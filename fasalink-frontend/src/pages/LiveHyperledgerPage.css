@@ -1,0 +1,171 @@
+/* Import Google Font (if not already in your global index.css) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* --- Main Page Container --- */
+.live-container {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8; /* Soft background, slightly darker than pure white */
+    color: #343a40; /* Dark text for contrast */
+    padding: 2.5rem; /* More generous padding */
+    max-width: 900px; /* Slightly wider container */
+    margin: 2.5rem auto;
+    border-radius: 1.5rem; /* More pronounced rounded corners */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* Deeper, softer shadow */
+}
+
+/* --- Header Section --- */
+.live-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem; /* More space below header */
+    border-bottom: 1px solid #e2e8f0; /* Subtle border for separation */
+    padding-bottom: 1.5rem; /* Padding below the header content */
+}
+
+.live-header h1 {
+    margin: 0;
+    font-size: 2rem; /* Larger, more prominent title */
+    color: #3A5A40; /* Primary brand dark green */
+    font-weight: 700; /* Bolder title */
+}
+
+.logout-btn {
+    background-color: transparent;
+    color: #3A5A40; /* Text color matching brand green */
+    font-weight: 600;
+    padding: 0.75rem 1.5rem; /* Larger padding for button */
+    border: 2px solid #E9F5DB; /* Light brand green border */
+    border-radius: 0.75rem; /* Rounded corners for button */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smoother transition */
+    font-size: 0.95rem; /* Slightly larger font */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Subtle button shadow */
+}
+
+.logout-btn:hover {
+    background-color: #E9F5DB; /* Background color on hover */
+    color: #2c422f; /* Darker text on hover */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* More pronounced shadow on hover */
+    transform: translateY(-1px); /* Slight lift effect */
+}
+
+/* --- Card Styling --- */
+.live-card {
+    background-color: #ffffff;
+    border-radius: 1.25rem; /* Consistent rounded corners with container */
+    padding: 2rem; /* More padding inside cards */
+    margin-bottom: 2rem; /* More space between cards */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Soft, noticeable shadow for cards */
+}
+
+.live-card h2 {
+    margin-top: 0;
+    margin-bottom: 1.75rem; /* Spacing below card titles */
+    color: #3A5A40; /* Primary brand dark green */
+    font-size: 1.5rem; /* Larger card titles */
+    font-weight: 600; /* Semibold titles */
+    border-bottom: 1px solid #E9F5DB; /* Light green separator line */
+    padding-bottom: 1rem; /* Padding below title before separator */
+}
+
+/* --- Form Elements --- */
+.live-form {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap for responsiveness */
+    gap: 1.25rem; /* Increased gap for spacing */
+    align-items: center; /* Vertically align items */
+}
+
+.live-input {
+    flex: 1 1 auto; /* Allows inputs to grow and shrink */
+    min-width: 180px; /* Minimum width before wrapping */
+    padding: 0.9rem 1.2rem; /* More vertical padding */
+    border: 1px solid #cbd5e0; /* Subtle border color */
+    border-radius: 0.75rem; /* Rounded input fields */
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+.live-input:focus {
+    outline: none;
+    border-color: #96C85B; /* Primary Theme Green on focus */
+    box-shadow: 0 0 0 3px rgba(150, 200, 91, 0.3); /* Soft glow on focus */
+}
+
+.primary-btn {
+    background-color: #96C85B; /* Primary Theme Green */
+    color: white;
+    font-weight: 700;
+    padding: 0.9rem 1.5rem; /* More padding for buttons */
+    border: none;
+    border-radius: 0.75rem; /* Rounded button corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-size: 1.05rem; /* Slightly larger font */
+    text-shadow: 0 1px 1px rgba(0,0,0,0.15); /* More pronounced text shadow */
+    flex-shrink: 0; /* Prevent button from shrinking too much */
+}
+
+.primary-btn:hover {
+    background-color: #84b34c; /* Darker shade of primary green */
+    transform: translateY(-1px); /* Subtle lift on hover */
+    box-shadow: 0 4px 15px rgba(150, 200, 91, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Specific styling for the Query Lot form to keep inputs and button aligned */
+.query-form-layout {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+.query-form-layout .live-input {
+    flex: 1; /* Allow input to take available space */
+    min-width: 200px;
+}
+.query-form-layout .primary-btn {
+    flex-shrink: 0; /* Keep button from shrinking */
+}
+
+/* --- Results and Status Section --- */
+.status-text {
+    font-weight: 500;
+    color: #495057;
+    background-color: #e9ecef;
+    padding: 1rem 1.5rem; /* More padding */
+    border-radius: 0.75rem; /* Rounded corners */
+    margin: 0;
+    word-break: break-word;
+    font-size: 0.95rem; /* Slightly smaller for status */
+}
+
+.error-text {
+    font-weight: 500;
+    color: #c92a2a; /* Stronger red */
+    background-color: #fff5f5;
+    padding: 1rem 1.5rem; /* More padding */
+    border-radius: 0.75rem; /* Rounded corners */
+    margin-top: 1.5rem; /* More space above error */
+    word-break: break-word;
+    font-size: 0.95rem;
+}
+
+.results-box {
+    background-color: #212529; /* Darker background for code */
+    color: #f8f9fa;
+    padding: 1.5rem; /* More padding */
+    border-radius: 0.75rem; /* Rounded corners */
+    margin-top: 1.5rem; /* More space above results */
+    overflow-x: auto;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.15); /* Inner shadow for code box */
+}
+
+.results-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-size: 0.9rem; /* Slightly larger code font */
+    line-height: 1.5; /* Better line spacing */
+}

@@ -1,0 +1,134 @@
+.profile-page { 
+    background-color: #E9F5DB; /* Light theme green */
+    min-height: 100vh; 
+    padding-bottom: 4rem; /* Space for content */
+}
+
+.profile-header-card {
+    padding: 2rem 1rem 6rem 1rem; 
+    color: #3A5A40; 
+    text-align: center;
+}
+
+.profile-header-card h1 { 
+    font-size: 1.75rem; 
+    font-weight: 700; 
+}
+
+.profile-content-card {
+    background-color: white; 
+    border-top-left-radius: 2rem; 
+    border-top-right-radius: 2rem;
+    padding: 1.5rem; 
+    margin: -4rem 1rem 0 1rem;
+    position: relative;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.05);
+}
+
+.avatar-container {
+    position: relative; 
+    width: 120px; 
+    height: 120px; 
+    margin: -75px auto 1.5rem auto; /* Overlap the top edge */
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.avatar-placeholder { 
+    width: 100%; 
+    height: 100%; 
+    color: #9ca3af; 
+}
+
+.edit-btn {
+    position: absolute; 
+    bottom: 5px; 
+    right: 5px; 
+    width: 35px; 
+    height: 35px;
+    border-radius: 50%; 
+    background-color: #3A5A40; 
+    color: white; 
+    border: 3px solid white;
+    display: grid; 
+    place-items: center; 
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.edit-btn:hover {
+    transform: scale(1.1);
+}
+
+.profile-form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1.25rem; 
+}
+
+.form-group { 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.form-group label { 
+    font-size: 0.8rem; 
+    font-weight: 600;
+    color: #6b7280; 
+    margin-bottom: 0.25rem; 
+    text-transform: uppercase;
+}
+
+.form-group input, .form-group textarea {
+    border: 1px solid #d1d5db; 
+    border-radius: 0.75rem; 
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9fafb;
+}
+.form-group input:disabled, .form-group textarea:disabled {
+    background-color: #e9ecef;
+    border-color: transparent;
+    color: #343a40;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.btn {
+    flex-grow: 1;
+    padding: 0.8rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+.save-btn {
+    background-color: #96C85B;
+    color: white;
+}
+.cancel-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+.logout-section {
+    margin-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1.5rem;
+}
+
+.logout-btn-main {
+    width: 100%;
+    background-color: #ef4444;
+    color: white;
+}
+.status-message {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 500;
+}

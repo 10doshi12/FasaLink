@@ -1,0 +1,84 @@
+.payments-container {
+    padding: 1rem;
+}
+
+.due-card {
+    background-color: #E9F5DB; /* light-green */
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3A5A40; /* dark-green */
+    margin-bottom: 1rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.due-item {
+    background-color: #96C85B; /* primary-green */
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.user-icon { color: #3A5A40; }
+.user-icon.large { font-size: 2.5rem; }
+.amount { font-weight: 600; }
+
+.history-section .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.history-section .section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #3A5A40;
+}
+
+.see-all-link {
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-decoration: none;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-details .name {
+    font-weight: 500;
+    color: #1f2937;
+}
+
+.item-details .date {
+    font-size: 0.875rem;
+    color: #6b7280;
+}

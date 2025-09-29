@@ -1,0 +1,189 @@
+.demo-container {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    padding: 1.5rem;
+}
+
+.demo-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #3A5A40; /* dark-green */
+}
+.demo-header h1 {
+    margin: 0.5rem 0;
+}
+.demo-header p {
+    margin: 0;
+    color: #6b7280;
+}
+.demo-header .header-icon {
+    font-size: 2.5rem;
+    color: #96C85B; /* primary-green */
+}
+
+.main-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #E9F5DB; /* light-green */
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    color: #3A5A40;
+}
+.card p {
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+/* Role Selector */
+.role-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.role-btn {
+    flex-grow: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #d1d5db;
+    border-radius: 0.5rem;
+    background-color: #f9fafb;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+.role-btn:hover {
+    border-color: #96C85B;
+}
+.role-btn.active {
+    background-color: #3A5A40;
+    color: white;
+    border-color: #3A5A40;
+}
+.role-description {
+    background-color: #f0f4f8;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.role-description p { margin: 0; }
+
+/* Action Simulator */
+.action-simulator form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.action-simulator label {
+    font-weight: 600;
+}
+.action-simulator select, .action-simulator input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+.submit-btn {
+    background-color: #96C85B;
+    color: #3A5A40;
+    font-weight: 700;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+}
+.submit-btn:hover {
+    background-color: #84b34c;
+}
+.submit-btn:disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
+}
+
+/* Blockchain Visualizer */
+.chain {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+.block {
+    flex-shrink: 0;
+    width: 200px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 5px #bebebe, -3px -3px 5px #ffffff;
+}
+.block-header {
+    background-color: #3A5A40;
+    color: white;
+    padding: 0.5rem;
+    font-weight: 700;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.block-content {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    word-wrap: break-word;
+}
+.tx-id {
+    color: #ef4444;
+    font-family: 'Courier New', Courier, monospace;
+}
+.block.pending {
+    display: grid;
+    place-items: center;
+    height: 120px;
+    border-style: dashed;
+    font-weight: 600;
+    color: #6b7280;
+}
+.chain-link {
+    flex-shrink: 0;
+    width: 40px;
+    height: 5px;
+    background-color: #3A5A40;
+}
+
+/* Transaction History */
+.history-table {
+    display: flex;
+    flex-direction: column;
+}
+.history-header, .history-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1.5fr;
+    gap: 1rem;
+    padding: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+.history-header {
+    font-weight: 700;
+    background-color: #f9fafb;
+}
+.history-row span {
+    font-size: 0.875rem;
+    color: #4b5563;
+}

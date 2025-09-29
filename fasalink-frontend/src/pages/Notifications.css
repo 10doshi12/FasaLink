@@ -1,0 +1,22 @@
+.notifications-page { background-color: #E9F5DB; min-height: 100vh; }
+.header-card {
+    padding: 2rem 1rem 4rem 1rem; display: flex; align-items: center; gap: 1rem; color: #3A5A40;
+}
+.main-title { font-size: 1.5rem; font-weight: 700; }
+.main-content-card {
+    background-color: white; border-top-left-radius: 2rem; border-top-right-radius: 2rem;
+    padding: 1rem; margin-top: -2rem; min-height: 80vh;
+}
+.search-bar { width: 100%; border: 1px solid #d1d5db; border-radius: 0.5rem;
+    padding: 0.75rem 1rem; margin-bottom: 1.5rem;
+}
+.notifications-list { display: flex; flex-direction: column; gap: 1.5rem; }
+.notification-item { display: flex; gap: 1rem; align-items: flex-start; }
+.icon-container {
+    background-color: #E9F5DB; color: #3A5A40; width: 40px; height: 40px;
+    border-radius: 50%; display: grid; place-items: center; flex-shrink: 0;
+}
+.content-container { flex-grow: 1; }
+.content-container .title { font-weight: 600; }
+.content-container .message { font-size: 0.875rem; color: #6b7280; margin: 0.25rem 0 0 0; }
+.time { font-size: 0.75rem; color: #9ca3af; flex-shrink: 0; white-space: nowrap; }

@@ -1,0 +1,81 @@
+/* Shared page styles (can be moved to a global file) */
+.page-container {
+    padding: 1rem;
+    background-color: white;
+    min-height: 100vh;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    color: #3A5A40;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.page-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Form specific styles */
+.create-lot-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.drop-zone {
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #6b7280;
+}
+
+.drop-zone-icon {
+    color: #9ca3af;
+}
+
+.next-btn {
+    background-color: #A2D2FF;
+    color: #3A5A40;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.8rem 0;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}

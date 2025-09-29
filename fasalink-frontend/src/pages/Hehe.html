@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Lot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 20px;
+      color: #1d3917;
+      max-width: 400px; /* Simulate mobile view */
+      margin: 0 auto;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-weight: 600;
+      font-size: 24px;
+      margin: 0;
+    }
+    .subheader {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      color: #4c7262;
+    }
+    .subheader button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+    .subheader h2 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .search-sort {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      background-color: #e2e9f1;
+      border-radius: 20px;
+      padding: 8px 12px;
+    }
+    .search-sort button {
+      background-color: #687d84;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 6px 12px;
+      margin-right: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .search-sort input {
+      flex-grow: 1;
+      height: 36px;
+      border-radius: 15px;
+      border: none;
+      padding: 0 12px;
+      font-size: 16px;
+    }
+    .filter-button {
+      background-color: #1b422f;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 6px 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-left: 10px;
+    }
+    .lot-list {
+      margin-bottom: 60px;
+    }
+    .lot-card {
+      background-color: #ccf5c1;
+      border-radius: 20px;
+      padding: 15px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .lot-info {
+      font-size: 16px;
+    }
+    .lot-info h3 {
+      margin: 0 0 5px 0;
+      font-weight: 600;
+      font-size: 20px;
+    }
+    .lot-info p {
+      margin: 4px 0;
+      font-weight: bold;
+    }
+    .map-icon {
+      width: 60px;
+      height: 60px;
+    }
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      border-top: 1px solid #ccc;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      max-width: 400px; /* Match body width */
+      margin: 0 auto;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: black;
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+    nav button.active {
+      color: #1d3917;
+      font-weight: 600;
+    }
+    .icon {
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="profile-icon">👤</div>
+    <h1>FASA<span style="color: #4c7262;">Link</span></h1>
+    <div>
+      <button title="Chat">💬</button>
+      <button title="Notifications">🔔</button>
+    </div>
+  </header>
+  <div class="subheader">
+    <button id="backButton" aria-label="Back">←</button>
+    <h2>Track Lot</h2>
+  </div>
+  <div class="search-sort">
+    <button id="sortBtn">Sort ⬇️</button>
+    <input type="text" id="searchInput" placeholder="Search lot">
+    <button class="filter-button">Filter 🔍</button>
+  </div>
+  <div class="lot-list" id="lotList"></div>
+  <nav>
+    <button id="homeBtn"><span class="icon">🏠</span>Home</button>
+    <button id="paymentBtn"><span class="icon">💳</span>Payment</button>
+    <button id="inventoryBtn"><span class="icon">📦</span>Inventory</button>
+    <button id="trackingBtn" class="active"><span class="icon">🗺️</span>Tracking</button>
+    <button id="historyBtn"><span class="icon">⏰</span>History</button>
+  </nav>
+
+  <script>
+    const lots = [
+      { id: '123', broker: 'XYZ', arrivingDate: '23-07-2025' },
+      { id: '143', broker: 'XYZ', arrivingDate: '23-07-2025' },
+      { id: '153', broker: 'XYZ', arrivingDate: '23-07-2025' }
+    ];
+
+    function renderLots(filter = '') {
+      const list = document.getElementById('lotList');
+      list.innerHTML = '';
+      const filteredLots = lots.filter(lot => lot.id.includes(filter));
+      filteredLots.forEach(lot => {
+        const card = document.createElement('div');
+        card.className = 'lot-card';
+        card.innerHTML = `
+          <div class="lot-info">
+            <h3>Lot #${lot.id}</h3>
+            <p>Broker: ${lot.broker}</p>
+            <p>Arriving Date: ${lot.arrivingDate}</p>
+          </div>
+          <img class="map-icon" src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Map Icon">
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      renderLots(e.target.value);
+    });
+
+    // Initial render
+    renderLots();
+  </script>
+</body>
+</html>

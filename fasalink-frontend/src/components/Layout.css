@@ -1,0 +1,36 @@
+.layout-container {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F4F4F4; /* off-white */
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-logo {
+  height: 2rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-icon {
+  color: #4b5563;
+  cursor: pointer;
+}
+
+.main-content {
+  /* Padding bottom prevents content from being hidden by the bottom nav */
+  padding-bottom: 5rem; 
+}

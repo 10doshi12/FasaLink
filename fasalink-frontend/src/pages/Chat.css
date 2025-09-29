@@ -1,0 +1,38 @@
+.chat-container {
+    display: flex; flex-direction: column; height: 100vh; background-color: #f3f4f6;
+}
+.chat-header {
+    display: flex; align-items: center; gap: 1rem; padding: 1rem;
+    background-color: #96C85B; color: #3A5A40; flex-shrink: 0;
+}
+.chat-header button { background: none; border: none; color: inherit; cursor: pointer; }
+.chat-info { flex-grow: 1; }
+.chat-info h3 { font-size: 1.125rem; margin: 0; }
+.chat-info span { font-size: 0.875rem; }
+.chat-actions { display: flex; gap: 1rem; }
+.messages-area {
+    flex-grow: 1; padding: 1rem; overflow-y: auto; display: flex; flex-direction: column-reverse;
+}
+.message {
+    padding: 0.75rem 1rem; border-radius: 1.25rem; max-width: 75%;
+    margin-bottom: 0.75rem; line-height: 1.4;
+}
+.received {
+    background-color: white; align-self: flex-start; border-top-left-radius: 0;
+}
+.sent {
+    background-color: #d1d5db; align-self: flex-end; border-top-right-radius: 0;
+}
+.message-input-area {
+    display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem;
+    background-color: white; border-top: 1px solid #e5e7eb; flex-shrink: 0;
+}
+.message-input-area input {
+    flex-grow: 1; border: none; padding: 0.75rem; font-size: 1rem;
+}
+.message-input-area input:focus { outline: none; }
+.send-btn {
+    background-color: #96C85B; color: white; width: 44px; height: 44px;
+    border-radius: 50%; border: none; display: grid; place-items: center;
+    cursor: pointer;
+}
